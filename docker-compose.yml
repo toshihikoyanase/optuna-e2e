@@ -18,12 +18,6 @@ services:
     ports:
       - "5432:5432"
     platform: linux/x86_64
-  redis:
-    image: "redis:6.2.6"
-    command: "redis-server"
-    ports:
-      - "6379:6379"
-    platform: linux/x86_64
   mssql:
     # FIXME (himkt): https://github.com/microsoft/mssql-docker/issues/668
     # image: "mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04"
@@ -41,11 +35,19 @@ services:
     volumes:
       - ./src:/work/src
       - ./data:/work/data
-  optuna-300:
+  optuna-300b:
     platform: linux/amd64
     build:
       context: .
-      dockerfile: ./docker/optuna-300/Dockerfile
+      dockerfile: docker/optuna-300b/Dockerfile
+    volumes:
+      - ./src:/work/src
+      - ./data:/work/data
+  optuna-300c:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: docker/optuna-300c/Dockerfile
     volumes:
       - ./src:/work/src
       - ./data:/work/data

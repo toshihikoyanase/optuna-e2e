@@ -9,4 +9,9 @@ def objective(trial: optuna.Trial) -> float:
     y2 = trial.suggest_int("y2", 1, 10, log=True)
     y3 = trial.suggest_int("y3", 0, 10, step=2)
     c1 = trial.suggest_categorical("c1", [1, 10, 100])
+
+    trial.report(float('inf'), step=1)
+    trial.report(float('-inf'), step=2)
+    trial.report(0.5, step=3)
+
     return x1**y1 + x2**y2 + x3**y3 + c1
