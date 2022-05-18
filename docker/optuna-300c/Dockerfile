@@ -1,7 +1,7 @@
 FROM python:3.9.10-buster
 
 RUN pip install -U pip
-RUN pip install git+https://github.com/c-bata/optuna.git@fix-intermediate-value-inf-test
+RUN pip install git+https://github.com/c-bata/optuna.git@fix-intermediate-value-inf
 RUN pip install PyMySQL psycopg2-binary cryptography redis pymssql
 
 WORKDIR /work

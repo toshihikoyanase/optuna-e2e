@@ -16,10 +16,4 @@ print("mssql")
 study4 = optuna.load_study(study_name="test", storage="mssql+pymssql://sa:optuna-test-5ZYB@mssql/optuna?charset=utf8")
 study4.optimize(objective, n_trials=10)
 
-print(study1)
-print(study2)
-print(study3)
-print(study4)
-print(study5)
-
 print("done")
