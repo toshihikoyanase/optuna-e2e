@@ -34,5 +34,5 @@ docker compose run --rm optuna-300b python src/init.py
 docker compose run --rm optuna-300c bash src/upgrade.sh
 
 # Resume study
-docker compose run --rm optuna-300b python src/load.py
+docker compose run --rm optuna-300c python src/load.py
 ```
