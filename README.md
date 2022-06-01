@@ -16,7 +16,7 @@ docker compose down
 docker compose run --rm optuna-300b bash
 ```
 
-### Run optimization with Optuna PR 3564
+### Run optimization with Optuna PR 3603
 
 ```sh
 docker compose run --rm optuna-300c bash
