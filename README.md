@@ -16,10 +16,10 @@ docker compose down
 docker compose run --rm optuna-300b bash
 ```
 
-### Run optimization with Optuna PR 3603
+### Run optimization with Optuna PR 3559
 
 ```sh
-docker compose run --rm optuna-300c bash
+docker compose run --rm optuna-300d bash
 ```
 
 ---
@@ -28,11 +28,11 @@ docker compose run --rm optuna-300c bash
 
 ```sh
 # Create study
-docker compose run --rm optuna-300b python src/init.py
+docker compose run --rm optuna-300c python src/init.py
 
 # Run migration on RDB
-docker compose run --rm optuna-300c bash src/upgrade.sh
+docker compose run --rm optuna-300d bash src/upgrade.sh
 
 # Resume study
-docker compose run --rm optuna-300c python src/load.py
+docker compose run --rm optuna-300d python src/load.py
 ```

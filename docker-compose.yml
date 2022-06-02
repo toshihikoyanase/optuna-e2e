@@ -51,3 +51,11 @@ services:
     volumes:
       - ./src:/work/src
       - ./data:/work/data
+  optuna-300d:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: docker/optuna-300d/Dockerfile
+    volumes:
+      - ./src:/work/src
+      - ./data:/work/data
