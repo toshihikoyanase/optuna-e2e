@@ -35,27 +35,11 @@ services:
     volumes:
       - ./src:/work/src
       - ./data:/work/data
-  optuna-300b:
+  optuna-300:
     platform: linux/amd64
     build:
       context: .
-      dockerfile: docker/optuna-300b/Dockerfile
-    volumes:
-      - ./src:/work/src
-      - ./data:/work/data
-  optuna-300c:
-    platform: linux/amd64
-    build:
-      context: .
-      dockerfile: docker/optuna-300c/Dockerfile
-    volumes:
-      - ./src:/work/src
-      - ./data:/work/data
-  optuna-300d:
-    platform: linux/amd64
-    build:
-      context: .
-      dockerfile: docker/optuna-300d/Dockerfile
+      dockerfile: docker/optuna-300/Dockerfile
     volumes:
       - ./src:/work/src
       - ./data:/work/data
