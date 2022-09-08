@@ -1,7 +1,7 @@
 ### Setup database
 
 ```sh
-docker compose up --build
+docker compose up -d --build
 ```
 
 ### Clean
