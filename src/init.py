@@ -1,18 +1,7 @@
 import os
 import optuna
-import pymssql
 
 from objective import objective
-
-
-def create_mssql_database() -> None:
-    conn = pymssql.connect("mssql", "sa", "optuna-test-5ZYB")
-    conn.autocommit(True)
-    cursor = conn.cursor()
-    cursor.execute("CREATE DATABASE optuna")
-
-
-create_mssql_database()
 
 
 print("mysql")
@@ -27,8 +16,5 @@ if os.path.exists(sqlite_path):
     os.remove(sqlite_path)
 study3 = optuna.create_study(study_name="test", storage=f"sqlite:///{sqlite_path}")
 study3.optimize(objective, n_trials=10)
-print("mssql")
-study4 = optuna.create_study(study_name="test", storage="mssql+pymssql://sa:optuna-test-5ZYB@mssql/optuna?charset=utf8")
-study4.optimize(objective, n_trials=10)
 
 print("done")

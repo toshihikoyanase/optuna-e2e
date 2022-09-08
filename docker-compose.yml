@@ -18,15 +18,6 @@ services:
     ports:
       - "5432:5432"
     platform: linux/x86_64
-  mssql:
-    # FIXME (himkt): https://github.com/microsoft/mssql-docker/issues/668
-    # image: "mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04"
-    image: "mcr.microsoft.com/azure-sql-edge"
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=optuna-test-5ZYB
-    ports:
-      - "1433:1433"
   optuna-210:
     platform: linux/amd64
     build:

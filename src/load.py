@@ -12,8 +12,5 @@ study2.optimize(objective, n_trials=10)
 print("sqlite")
 study3 = optuna.load_study(study_name="test", storage="sqlite:///data/sample.db")
 study3.optimize(objective, n_trials=10)
-print("mssql")
-study4 = optuna.load_study(study_name="test", storage="mssql+pymssql://sa:optuna-test-5ZYB@mssql/optuna?charset=utf8")
-study4.optimize(objective, n_trials=10)
 
 print("done")

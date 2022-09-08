@@ -8,6 +8,3 @@ optuna storage upgrade --storage postgresql+psycopg2://root:root@postgresql/optu
 
 echo "sqlite"
 optuna storage upgrade --storage sqlite:///data/sample.db
-
-echo "mssql"
-optuna storage upgrade --storage mssql+pymssql://sa:optuna-test-5ZYB@mssql/optuna?charset=utf8
